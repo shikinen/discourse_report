@@ -1,0 +1,22 @@
+.modal.history-modal {
+  button {
+    float: none;
+  }
+  #display-modes {
+    display: none;
+  }
+  #revision-numbers {
+    line-height: $line-height-large;
+  }
+  img {
+    max-width: 95%;
+    height: auto;
+  }
+  .revision-content {
+    table {
+      table-layout: fixed;
+      width: 100%;
+      word-wrap: break-word;
+    }
+  }
+}
