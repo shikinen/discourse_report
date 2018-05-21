@@ -1,6 +1,10 @@
  directory_name = "discourse" 
 
- Dir.glob(File.join(directory_name, "**", "*.*")).each do |file_name|
- 	puts file_name
+ file_list = Dir.glob(File.join(directory_name, "**", "*.*")).inject({}) do |file|
+ 	ext = File.extname(file)
+ 	hash[ext] ||= 0
+ 	hash[ext] += 1
+ 	hash
  end
- 
+
+ puts file_list
